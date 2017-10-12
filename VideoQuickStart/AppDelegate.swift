@@ -60,6 +60,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                  didFailToRegisterForRemoteNotificationsWithError error: Error) {
     print("Failed to register: \(error)")
   }
+    
+    func application(
+        _ application: UIApplication,
+        didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+        fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("asdfasdf")
+        let aps=userInfo["aps"] as? AnyObject
+        let mes=aps?["alert"]
+        let alert = UIAlertController(title: "Alert", message: mes as? String, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+        window!.rootViewController!.present(alert, animated: true, completion: nil)
+    }
 
 }
 

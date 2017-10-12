@@ -57,6 +57,7 @@
 		8B79D4731C2252A100489AA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B79D4751C2252A100489AA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3223A1B61416D0CEBE58E67 /* Pods-TwilioVideo-VideoQuickStart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwilioVideo-VideoQuickStart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwilioVideo-VideoQuickStart/Pods-TwilioVideo-VideoQuickStart.debug.xcconfig"; sourceTree = "<group>"; };
+		D9ADE8811F8D615100446E66 /* VideoQuickStart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VideoQuickStart.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +117,7 @@
 		8B79D4681C2252A100489AA5 /* VideoQuickStart */ = {
 			isa = PBXGroup;
 			children = (
+				D9ADE8811F8D615100446E66 /* VideoQuickStart.entitlements */,
 				8B99217A1C230E7800DC3BCA /* Source */,
 				8B9921791C230E6B00DC3BCA /* Storyboards */,
 				8B99217B1C230E8E00DC3BCA /* Supporting Files */,
@@ -196,8 +198,14 @@
 				TargetAttributes = {
 					8B79D4651C2252A100489AA5 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = SX5J6BN2KX;
+						DevelopmentTeam = KWVM5338W6;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -414,18 +422,22 @@
 			baseConfigurationReference = B3223A1B61416D0CEBE58E67 /* Pods-TwilioVideo-VideoQuickStart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SX5J6BN2KX;
+				CODE_SIGN_ENTITLEMENTS = VideoQuickStart/VideoQuickStart.entitlements;
+				DEVELOPMENT_TEAM = KWVM5338W6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = VideoQuickStart/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.twilio.VideoQuickStart;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twilio.voiptest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "69df9044-f1e6-4964-8985-ef8a449a5797";
+				PROVISIONING_PROFILE_SPECIFIER = test_bruno;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -434,18 +446,22 @@
 			baseConfigurationReference = 84176BF0A2236D1A56311E16 /* Pods-TwilioVideo-VideoQuickStart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SX5J6BN2KX;
+				CODE_SIGN_ENTITLEMENTS = VideoQuickStart/VideoQuickStart.entitlements;
+				DEVELOPMENT_TEAM = KWVM5338W6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = VideoQuickStart/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.twilio.VideoQuickStart;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twilio.voiptest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "69df9044-f1e6-4964-8985-ef8a449a5797";
+				PROVISIONING_PROFILE_SPECIFIER = test_bruno;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
